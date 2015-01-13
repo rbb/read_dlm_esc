@@ -8,11 +8,12 @@ In the current implementation consecutive delimiters are treated as a single del
 
 read_dlm_esc() Vs dlmread():
 -------------------------
-   - read_dlm_esc() is much faster
+   - read_dlm_esc() is much faster than dlmread(), but it is slower than csv2cell() from the io package
    - read_dlm_esc() is probably not as robust as dlmread()
    - read_dlm_esc() returns a cell array, rather than a matrix
    - Because read_dlm_esc() returns a cell array, strings can be loaded from a CSV file
    - read_dlm_esc(), as the name implies will escape delimiters. 
+   - read_dlm_esc() can handle a variable number of fields in a line, which dlmread() and csv2cell() will not do.
      
 Example
 -------
@@ -40,3 +41,6 @@ will return:
        [3,3] =  4
      }
 
+TODO
+----
+   - Implement the starting column parameter
