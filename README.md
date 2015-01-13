@@ -13,7 +13,7 @@ read_dlm_esc() Vs dlmread():
    - read_dlm_esc() returns a cell array, rather than a matrix
    - Because read_dlm_esc() returns a cell array, strings can be loaded from a CSV file
    - read_dlm_esc(), as the name implies will escape delimiters. 
-   - read_dlm_esc() can handle a variable number of fields in a line, which dlmread() and csv2cell() will not do.
+   - read_dlm_esc() can handle a variable number of fields in a line, which csv2cell() will not do.
      
 Example
 -------
